@@ -1,6 +1,6 @@
 # 🌤️ Weather Intelligence App
 
-A sleek, real-time single-page Weather Intelligence web application generated using **Google AI Studio App Build**, connected to **GitHub**, and deployed live on **Cloudflare Pages**.
+A real-time single-page Weather Intelligence web application generated using **Google AI Studio App Build**, pushed to **GitHub**, and deployed live on **Cloudflare**.
 
 ---
 
@@ -10,9 +10,9 @@ The **Weather Intelligence App** enables users to search for any city globally, 
 
 ### Key Features
 - 🔍 **City Search**: Instant geocoding and location query.
-- 🌡️ **Current Weather Hero**: Real-time temperature, wind speed, humidity, UV index, and atmospheric condition displays.
-- 📅 **7-Day Forecast & Charts**: Daily max/min temperature ranges and trends visualized with dynamic UI components.
-- 💡 **Planning Intelligence**: Smart activity and travel advice tailored to current weather metrics.
+- 🌡️ **Current Weather Hero**: Real-time temperature, wind speed, humidity, UV index, and atmospheric condition displays[cite: 1].
+- 📅 **7-Day Forecast & Charts**: Daily max/min temperature ranges and visual trends[cite: 1].
+- 💡 **Planning Intelligence**: Smart activity and travel advice tailored to current weather metrics[cite: 1].
 - 🛑 **Error Handling**: Graceful feedback banners for invalid city searches or network errors.
 
 ---
@@ -21,46 +21,27 @@ The **Weather Intelligence App** enables users to search for any city globally, 
 
 - **UI Framework**: React (TypeScript) + Vite
 - **Styling & Icons**: Tailwind CSS + Lucide React Icons
-- **Deployment Platform**: Cloudflare Pages
+- **Deployment Platform**: Cloudflare Pages / Workers
 - **Public APIs**:
-  - **Open-Meteo Geocoding API**: `https://geocoding-api.open-meteo.com/v1/search` (Converts city names into coordinates)
-  - **Open-Meteo Forecast API**: `https://api.open-meteo.com/v1/forecast` (Fetches current weather and 7-day forecast data)
+  - **Open-Meteo Geocoding API**: `https://geocoding-api.open-meteo.com/v1/search` (Converts city names into latitude/longitude coordinates)[cite: 1]
+  - **Open-Meteo Forecast API**: `https://api.open-meteo.com/v1/forecast` (Fetches current weather and 7-day forecast data)[cite: 1]
 
 ---
 
-## 🚀 How This Project Was Built & Deployed
+## 🚀 Step-by-Step Instructions: AI Studio to GitHub & Cloudflare Deployment
 
-### Step 1: App Building in Google AI Studio
+### Step 1: App Generation in Google AI Studio
 1. Created the React/Vite Weather Intelligence prototype using Google AI Studio App Build.
 2. Verified interactive features (city search, forecast cards, charts, error states) inside the Studio preview.
 
-### Step 2: GitHub Repository Connection
-1. Connected Google AI Studio directly to GitHub (or exported the generated source code into this repository).
-2. Verified essential root artifacts: `package.json`, `src/`, `vite.config.ts`, and project dependencies.
-
-### Step 3: Cloudflare Pages Deployment
-1. Logged into Cloudflare Dashboard → **Workers & Pages** → **Connect to Git**.
-2. Linked this GitHub repository and configured the build settings:
-   - **Framework Preset**: `Vite`
-   - **Build Command**: `npm run build`
-   - **Build Output Directory**: `dist`
-3. Successfully deployed the production build to Cloudflare Pages.
-
----
-
-## 💻 Local Development Setup
-
-To run this project locally on your machine:
-
-```bash
-# 1. Clone the repository
-git clone [https://github.com/YOUR_USERNAME/weather-intelligence-app.git](https://github.com/YOUR_USERNAME/weather-intelligence-app.git)
-
-# 2. Navigate to project directory
-cd weather-intelligence-app
-
-# 3. Install dependencies
-npm install
-
-# 4. Start local development server
-npm run dev
+### Step 2: GitHub Repository Setup
+1. Downloaded/exported the generated app source code from Google AI Studio.
+2. Created a new GitHub repository using company/organization credentials.
+3. Pushed the project source code to GitHub:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit from Google AI Studio App Build"
+   git branch -M main
+   git remote add origin [https://github.com/YOUR_USERNAME/weather-intelligence.git](https://github.com/YOUR_USERNAME/weather-intelligence.git)
+   git push -u origin main
